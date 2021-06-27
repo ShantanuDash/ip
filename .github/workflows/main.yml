@@ -16,6 +16,10 @@ on:
         description: 'Name of the output file'
         default: 'ip.out'
         required: true
+      time:
+        description: 'Time'
+        default: '6m'
+        required: true
 jobs:
 #job1
   DFT-calculations-Siesta:
@@ -23,10 +27,13 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: Siesta 1
-        run: |
-          cd ${{ github.event.inputs.dir-name }}
-          sudo timeout --foreground 5m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
+      - name: siesta-action
+        uses: ShantanuDash/siesta-action@parallel
+        with:
+            file-name: ${{ github.event.inputs.file-name }}
+            dir-name: ${{ github.event.inputs.dir-name }}
+            out-name: ${{ github.event.inputs.out-name }}
+            time: ${{ github.event.inputs.time }}
       - name: setup git config
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
