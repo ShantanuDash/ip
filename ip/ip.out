@@ -8,14 +8,14 @@ Directory       : /home/runner/work/ip/ip/ip
 SERIAL version
 
 * Running in serial mode
->> Start of run:  27-JUN-2021  11:01:50
+>> Start of run:  27-JUN-2021  11:25:17
 
                            ***********************       
                            *  WELCOME TO SIESTA  *       
                            ***********************       
 
 reinit: Reading from standard input
-reinit: Dumped input in INPUT_TMP.73630
+reinit: Dumped input in INPUT_TMP.08832
 ************************** Dump of input data file ****************************
 SystemName          iron porphyrin
 SystemLabel         ip
@@ -998,8 +998,8 @@ Attempting to read DM from file... Succeeded...
 DM from file:
 <dSpData2D:IO-DM: ip.DM
   <sparsity:IO-DM: ip.DM
-    nrows_g=387 nrows=387 sparsity=1.0873 nnzs=162841, refcount: 1>
-  <dData2D:(new from dSpData2D) n=162841 m=1, refcount: 1>
+    nrows_g=387 nrows=387 sparsity=1.0883 nnzs=162989, refcount: 1>
+  <dData2D:(new from dSpData2D) n=162989 m=1, refcount: 1>
 refcount: 1>
 DM to be used:
 <dSpData2D:Re-structured SpM
@@ -1007,65 +1007,3 @@ DM to be used:
     nrows_g=387 nrows=387 sparsity=1.0883 nnzs=162989, refcount: 8>
   <dData2D:(new in restruct) n=162989 m=1, refcount: 1>
 refcount: 1>
-Note: For starting DM, Qtot, Tr[D*S] =        120.00000000        120.42511227
-No. of atoms with KB's overlaping orbs in proc 0. Max # of overlaps:      53     275
-
-InitMesh: MESH = 150 x 150 x 150 = 3375000
-InitMesh: Mesh cutoff (required, used) =   370.000   383.658 Ry
-New grid distribution [1]: sub = 2
-
-stepf: Fermi-Dirac step function
-
-siesta: Program's energy decomposition (eV):
-siesta: Ebs     =     -1433.529593
-siesta: Eions   =      6065.232289
-siesta: Ena     =       701.455086
-siesta: Ekin    =      3920.328032
-siesta: Enl     =     -1882.715436
-siesta: Eso     =         0.000000
-siesta: Edftu   =         0.000000
-siesta: DEna    =       -97.487893
-siesta: DUscf   =        16.691186
-siesta: DUext   =         0.000000
-siesta: Ex      =     -1609.833242
-siesta: Ec      =      -143.960174
-siesta: Exc     =     -1753.793416
-siesta: eta*DQ  =         0.000000
-siesta: Emadel  =         0.000000
-siesta: Emeta   =         0.000000
-siesta: Emolmec =         0.000000
-siesta: Ekinion =         0.000000
-siesta: Eharris =     -5150.087310
-siesta: Etot    =     -5160.754729
-siesta: FreeEng =     -5160.763132
-
-        iscf     Eharris(eV)        E_KS(eV)     FreeEng(eV)     dDmax    Ef(eV) dHmax(eV)
-   scf:    1    -5150.087310    -5160.754729    -5160.763132  0.723646 -5.041628 12.382627
-timer: Routine,Calls,Time,% = IterSCF        1       9.649  10.13
-   scf:    2    -4119.960423    -4829.827194    -4829.827194  1.930188 -1.344174125.596826
-   scf:    3    -5189.165292    -5163.790258    -5163.864095  1.945250 -4.446262  2.491044
-   scf:    4    -5163.832034    -5163.918096    -5163.989414  0.279493 -4.526397  1.064639
-   scf:    5    -5156.535151    -5161.559964    -5161.612661  0.838585 -4.256406  9.856881
-   scf:    6    -5162.648596    -5163.880938    -5163.971197  1.182884 -4.597168  2.466176
-   scf:    7    -5163.720691    -5163.844313    -5163.932246  0.192660 -4.541680  1.310583
-   scf:    8    -5162.939447    -5163.465914    -5163.538116  0.203600 -4.638188  3.756605
-   scf:    9    -5163.088197    -5163.833716    -5163.926147  0.649902 -4.405943  2.973392
-   scf:   10    -5163.640165    -5163.992489    -5164.080784  0.433956 -4.535982  1.611195
-   scf:   11    -5164.053722    -5164.054563    -5164.147362  0.144044 -4.489115  0.086445
-   scf:   12    -5164.023621    -5164.045907    -5164.138378  0.092279 -4.468732  0.622070
-   scf:   13    -5164.060823    -5164.057268    -5164.149092  0.049115 -4.485163  0.072153
-   scf:   14    -5164.057772    -5164.057567    -5164.149322  0.001854 -4.486580  0.054065
-   scf:   15    -5164.057814    -5164.057762    -5164.149799  0.012448 -4.486502  0.056470
-   scf:   16    -5164.054659    -5164.056751    -5164.149419  0.037691 -4.484017  0.058700
-   scf:   17    -5164.055326    -5164.056114    -5164.148858  0.012907 -4.482108  0.062345
-   scf:   18    -5164.058650    -5164.057506    -5164.149932  0.014106 -4.479961  0.073268
-   scf:   19    -5164.059017    -5164.058357    -5164.150635  0.011158 -4.475174  0.057591
-   scf:   20    -5164.058383    -5164.058379    -5164.150697  0.001244 -4.472667  0.032721
-   scf:   21    -5164.058494    -5164.058443    -5164.150742  0.001338 -4.471563  0.012986
-   scf:   22    -5164.058770    -5164.058616    -5164.150826  0.004974 -4.471578  0.008510
-   scf:   23    -5164.058813    -5164.058721    -5164.150866  0.004093 -4.471718  0.008413
-   scf:   24    -5164.058755    -5164.058739    -5164.150878  0.001812 -4.471821  0.007004
-   scf:   25    -5164.058739    -5164.058739    -5164.150881  0.000381 -4.471820  0.006420
-   scf:   26    -5164.058787    -5164.058764    -5164.150890  0.001242 -4.471924  0.006659
-   scf:   27    -5164.058867    -5164.058820    -5164.150892  0.003312 -4.472367  0.005422
-   scf:   28    -5164.058812    -5164.058816    -5164.150893  0.000263 -4.472509  0.004444
