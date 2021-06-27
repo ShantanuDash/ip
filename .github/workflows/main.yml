@@ -23,12 +23,10 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: siesta-action
-        uses: ShantanuDash/siesta-action@parallel
-        with:
-            file-name: ${{ github.event.inputs.file-name }}
-            dir-name: ${{ github.event.inputs.dir-name }}
-            out-name: ${{ github.event.inputs.out-name }}
+      - name: Siesta 2
+        run: |
+          cd ${{ github.event.inputs.dir-name }}
+          timeout --foreground 5m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
       - name: setup git config
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
@@ -51,7 +49,7 @@ jobs:
       - name: Siesta 2
         run: |
           cd ${{ github.event.inputs.dir-name }}
-          timeout --foreground 5.75h ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
+          timeout --foreground 5.75m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
       - name: setup git config
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
@@ -73,7 +71,7 @@ jobs:
       - name: Siesta 3
         run: |
           cd ${{ github.event.inputs.dir-name }}
-          timeout --foreground 5.75h ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
+          timeout --foreground 5.75m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
       - name: setup git config
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
@@ -95,7 +93,7 @@ jobs:
       - name: Siesta 4
         run: |
           cd ${{ github.event.inputs.dir-name }}
-          timeout --foreground 5.75h ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
+          timeout --foreground 5.75m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
       - name: setup git config
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
@@ -116,7 +114,7 @@ jobs:
       - name: Siesta 5
         run: |
           cd ${{ github.event.inputs.dir-name }}
-          timeout --foreground 5.75h ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
+          timeout --foreground 5.75m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
       - name: setup git config
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
@@ -137,7 +135,7 @@ jobs:
       - name: Siesta 6
         run: |
           cd ${{ github.event.inputs.dir-name }}
-          timeout --foreground 5.75h ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
+          timeout --foreground 5.75m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
       - name: setup git config
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
