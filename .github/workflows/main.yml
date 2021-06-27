@@ -35,6 +35,7 @@ jobs:
             out-name: ${{ github.event.inputs.out-name }}
             time: ${{ github.event.inputs.time }}
       - name: setup git config
+        if: ${{ always() }}
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "GitHub Actions Bot"
@@ -58,6 +59,7 @@ jobs:
           cd ${{ github.event.inputs.dir-name }}
           sudo timeout --foreground 5.75m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
       - name: setup git config
+        if: ${{ always() }}
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "GitHub Actions Bot"
@@ -80,6 +82,7 @@ jobs:
           cd ${{ github.event.inputs.dir-name }}
           sudo timeout --foreground 5.75m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
       - name: setup git config
+        if: ${{ always() }}
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "GitHub Actions Bot"
@@ -102,6 +105,7 @@ jobs:
           cd ${{ github.event.inputs.dir-name }}
           sudo timeout --foreground 5.75m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
       - name: setup git config
+        if: ${{ always() }}
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "GitHub Actions Bot"
@@ -123,6 +127,7 @@ jobs:
           cd ${{ github.event.inputs.dir-name }}
           sudo timeout --foreground 5.75m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
       - name: setup git config
+        if: ${{ always() }}
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "GitHub Actions Bot"
@@ -144,6 +149,7 @@ jobs:
           cd ${{ github.event.inputs.dir-name }}
           sudo timeout --foreground 5.75m ./siesta < ${{ github.event.inputs.file-name }} | tee ${{ github.event.inputs.out-name }}
       - name: setup git config
+        if: ${{ always() }}
         run: |
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "GitHub Actions Bot"
