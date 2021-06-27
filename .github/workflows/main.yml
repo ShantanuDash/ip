@@ -24,6 +24,7 @@ jobs:
 #job1
   DFT-calculations-Siesta:
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -51,6 +52,7 @@ jobs:
   DFT-calculations-Siesta2:
     needs: DFT-calculations-Siesta
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -74,6 +76,7 @@ jobs:
   DFT-calculations-Siesta3:
     needs: DFT-calculations-Siesta2
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -97,6 +100,7 @@ jobs:
   DFT-calculations-Siesta4:
     needs: DFT-calculations-Siesta3
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -119,6 +123,7 @@ jobs:
   DFT-calculations-Siesta5:
     needs: DFT-calculations-Siesta4
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: checkout
         uses: actions/checkout@v2
@@ -141,6 +146,7 @@ jobs:
   DFT-calculations-Siesta6:
     needs: DFT-calculations-Siesta5
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
       - name: checkout
         uses: actions/checkout@v2
